@@ -1,5 +1,10 @@
-# nfl_project
-Project 3
+# NFL Data Engineering
+**Overview:** Measuring level of popularity of NFL teams during 2023 by analyzing stadium capacity, ticket pricing, TV viewership, social media following, and merchandising. 
+
+
+_Analysis includes:_
+1. Gathering relevant datasets and creating CSV filed
+2. La
 Team Members
 Seth Dalmacio
 Rachel Brown
