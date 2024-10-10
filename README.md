@@ -4,32 +4,36 @@
 
 _Analysis includes:_
 1. Gathering relevant datasets and creating CSV filed
-2. La
-Team Members
-Seth Dalmacio
-Rachel Brown
-Talibah Timothy
-Lilliana Perez Diaz
-Isfund Akram
-Track - Data Engineering
-NFL Team Popularity
-Question: Which NFL team was the most popular in 2023?
-Definition of Popularity:
-Stadiums Capacity / Stadium Filled per game
-TV Viewership
-Social Media Following
-Merchandising
-Ticket Pricing
-Datasets:
-Attendance 2023 : https://www.espn.com/nfl/attendance/_/year/2023
-Ticket Price 2023: Statista.com/Published by Christina Gough,
-City Population for each team: Census.gov
-Social Media Presence:
-Merchandising Sales - By Team:
-Ticket Sales:
-TV Viewership: Statista.com
-Stadium Capacity:
-Stadium Locations: https://www.kaggle.com/datasets/kayla96/nfl-
+2. Creating scematics that declare primary and foreign keys
+3. Loading, cleaning, and transforming the data accordingly to become desired usbale data sets
+4. Aligning keys across datasets to create visualizations of new datasets
+
+**Table of Contents**
+1. Dependecies
+2. Installation Instructions
+3. Features
+4. Acknowledgements
+
+**Dependencies:*
+1. Pandas
+2. Numpy
+
+**Installation Instructions:**
+*
+
+
+*Acknowledgements**
+*Attendance 2023 : https://www.espn.com/nfl/attendance/_/year/2023
+*Ticket Price 2023: Statista.com/Published by Christina Gough,
+*City Population for each team: Census.gov
+*Social Media Presence:
+*Merchandising Sales - By Team:
+*Ticket Sales:
+*TV Viewership: Statista.com
+*Stadium Capacity:
+*Stadium Locations: https://www.kaggle.com/datasets/kayla96/nfl-
+
+
 teams-data
 Process:
 1. ERD Schemata: Seth & Team
