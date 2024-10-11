@@ -9,10 +9,13 @@ _Analysis includes:_
 4. Aligning keys across datasets to create visualizations of new datasets
 
 **Table of Contents**
-1. Dependecies
-2. Installation Instructions
-3. Features
-4. Acknowledgements
+1.Ethical Summarization
+2. Dependecies
+3. Installation Instructions
+4. Features
+5. Acknowledgements
+
+**Ethical Summarization:*
 
 **Dependencies:*
 1. Pandas
