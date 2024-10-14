@@ -1,0 +1,395 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -78.78746,42.773773 ]
+     },
+     "properties": {
+     "stadium_id":104,
+     "home_stadium":"Highmark Stadium",
+     "city_state":"Ochard Park_ New York",
+     "capacity":71608
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -80.239311,25.95796 ]
+     },
+     "properties": {
+     "stadium_id":119,
+     "home_stadium":"Hard Rock Stadium",
+     "city_state":"Miami Gardens_ Florida",
+     "capacity":65326
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -71.25866563,42.08783298 ]
+     },
+     "properties": {
+     "stadium_id":121,
+     "home_stadium":"Gillete Stadium",
+     "city_state":"Foxborough_ Massachusetts",
+     "capacity":66829
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -74.217121,40.813778 ]
+     },
+     "properties": {
+     "stadium_id":123,
+     "home_stadium":"MetLife Stadium",
+     "city_state":"East Rutherford_ New Jersey",
+     "capacity":82500
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -105.020828,39.744129 ]
+     },
+     "properties": {
+     "stadium_id":110,
+     "home_stadium":"Empower Field at Mile High",
+     "city_state":"Denver_ Colorado",
+     "capacity":76125
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -94.484566,39.048786 ]
+     },
+     "properties": {
+     "stadium_id":116,
+     "home_stadium":"Arrowhead Stadium",
+     "city_state":"Kansas City_ Missouri",
+     "capacity":76416
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -115.183952,36.090794 ]
+     },
+     "properties": {
+     "stadium_id":117,
+     "home_stadium":"Allegiant Stadium",
+     "city_state":"Paradise_ Nevada",
+     "capacity":65500
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -118.482441,33.953587 ]
+     },
+     "properties": {
+     "stadium_id":118,
+     "home_stadium":"SoFi Stadium",
+     "city_state":"Inglewood_ California",
+     "capacity":27000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -76.623322,39.278088 ]
+     },
+     "properties": {
+     "stadium_id":103,
+     "home_stadium":"M&T Bank Stadium",
+     "city_state":"Baltimore_ Maryland",
+     "capacity":71008
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -84.516846,39.096306 ]
+     },
+     "properties": {
+     "stadium_id":107,
+     "home_stadium":"Paycor Stadium",
+     "city_state":"Cincinnati_ Ohio",
+     "capacity":65515
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -81.700058,41.506035 ]
+     },
+     "properties": {
+     "stadium_id":108,
+     "home_stadium":"Cleveland Browns Stadium",
+     "city_state":"Cleveland_ Ohio",
+     "capacity":67895
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -80.00949996,40.44133157 ]
+     },
+     "properties": {
+     "stadium_id":125,
+     "home_stadium":"Acrisure Stadium",
+     "city_state":"Pittsburgh_ Pennsylvania",
+     "capacity":68400
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -95.411667,29.68486 ]
+     },
+     "properties": {
+     "stadium_id":113,
+     "home_stadium":"NRG Stadium",
+     "city_state":"Houston_ Texas",
+     "capacity":72220
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -86.163712,39.759991 ]
+     },
+     "properties": {
+     "stadium_id":114,
+     "home_stadium":"Lucas Oil Stadium",
+     "city_state":"Indianapolis_ Indiana",
+     "capacity":67000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -81.636528,30.323471 ]
+     },
+     "properties": {
+     "stadium_id":115,
+     "home_stadium":"EverBank Stadium",
+     "city_state":"Jacksonville_ Florida",
+     "capacity":69132
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -86.77129,36.166479 ]
+     },
+     "properties": {
+     "stadium_id":129,
+     "home_stadium":"Nissan Stadium",
+     "city_state":"Nashville_ Tennessee",
+     "capacity":69143
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -97.093628,32.747841 ]
+     },
+     "properties": {
+     "stadium_id":109,
+     "home_stadium":"AT&T Stadium",
+     "city_state":"Arlington_ Texas",
+     "capacity":80000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -75.168098,39.900898 ]
+     },
+     "properties": {
+     "stadium_id":124,
+     "home_stadium":"Lincoln Financial Field",
+     "city_state":"Philadelphia_ Pennsylvania",
+     "capacity":69596
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -76.85866323,38.90466305 ]
+     },
+     "properties": {
+     "stadium_id":130,
+     "home_stadium":"FedExField",
+     "city_state":"Landover_ Maryland",
+     "capacity":63000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -112.263275,33.527283 ]
+     },
+     "properties": {
+     "stadium_id":101,
+     "home_stadium":"State Farm Stadium",
+     "city_state":"Glendale_ Arizona",
+     "capacity":63400
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -121.9688691,37.40201489 ]
+     },
+     "properties": {
+     "stadium_id":126,
+     "home_stadium":"Levi's Stadium",
+     "city_state":"Santa Clara_ California",
+     "capacity":68500
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -122.3256654,47.59049764 ]
+     },
+     "properties": {
+     "stadium_id":127,
+     "home_stadium":"Lumen Field",
+     "city_state":"Seattle_ Washington",
+     "capacity":69000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -87.617256,41.862366 ]
+     },
+     "properties": {
+     "stadium_id":106,
+     "home_stadium":"Soldier Field",
+     "city_state":"Chicago_ Illinois",
+     "capacity":61500
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.046341,42.340115 ]
+     },
+     "properties": {
+     "stadium_id":111,
+     "home_stadium":"Ford Field",
+     "city_state":"Detroit_ Michigan",
+     "capacity":65000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -88.0573331,44.50083133 ]
+     },
+     "properties": {
+     "stadium_id":112,
+     "home_stadium":"Lambeau Field",
+     "city_state":"Green Bay_ Wisconsin",
+     "capacity":81441
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -93.258736,44.973774 ]
+     },
+     "properties": {
+     "stadium_id":120,
+     "home_stadium":"U.S. Bank Stadium",
+     "city_state":"Minneapolis_ Minnesota",
+     "capacity":66655
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -84.401993,33.755489 ]
+     },
+     "properties": {
+     "stadium_id":102,
+     "home_stadium":"Mercedes-Benz Stadium",
+     "city_state":"Atlanta_ Georgia",
+     "capacity":71000
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -80.853607,35.225845 ]
+     },
+     "properties": {
+     "stadium_id":105,
+     "home_stadium":"Bank of America Stadium",
+     "city_state":"Charlotte_ North Carolina",
+     "capacity":75523
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -90.08197,29.951439 ]
+     },
+     "properties": {
+     "stadium_id":122,
+     "home_stadium":"Caesars Superdome",
+     "city_state":"New Orleans_ Louisiana",
+     "capacity":73208
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -82.503693,27.975958 ]
+     },
+     "properties": {
+     "stadium_id":128,
+     "home_stadium":"Raymond James Stadium",
+     "city_state":"Tampa_ Florida",
+     "capacity":65890
+     }
+   }
+ ]
+ }
