@@ -1,33 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
   <title>NFL Stadium Map</title>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="" />
-
-  <!-- Leaflet JavaScript code -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-  <!-- D3 Library -->
-   <script src ="https://d3js.org/d3.v7.min.js"></script>
-
-
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+  </style>
 </head>
-
 <body>
-  <!-- The div where we'll insert our map -->
+  <h2>NFL Stadiums in the USA</h2>
   <div id="map"></div>
 
-  <!-- JavaScript file -->
-  <script type="text/javascript" src="logic.js"></script>
-</body>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Map Of USA
+    var map = L.map('map').setView([37.8, -96], 4);
 
+    // OpenStreet
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: ' OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Stadium Information
+    var stadiums = [
+      { name: "MetLife Stadium", lat: 40.8135, lon: -74.0745, team: "New York Giants/New York Jets", capacity: 82500 },
+      { name: "AT&T Stadium", lat: 32.7473, lon: -97.0945, team: "Dallas Cowboys", capacity: 80000 },
+      { name: "Arrowhead Stadium", lat: 39.0489, lon: -94.4839, team: "Kansas City Chiefs", capacity: 76416 },
+      { name: "Mercedes-Benz Stadium", lat: 33.7554, lon: -84.4009, team: "Atlanta Falcons", capacity: 71000 },
+      { name: "Soldier Field", lat: 41.8623, lon: -87.6167, team: "Chicago Bears", capacity: 61500 },
+      { name: "Ford Field", lat: 42.3400, lon: -83.0456, team: "Detroit Lions", capacity: 65000 },
+      { name: "Lambeau Field", lat: 44.5013, lon: -88.0622, team: "Green Bay Packers", capacity: 81441 },
+      { name: "U.S. Bank Stadium", lat: 44.9737, lon: -93.2577, team: "Minnesota Vikings", capacity: 66655 },
+      { name: "Gillette Stadium", lat: 42.0909, lon: -71.2643, team: "New England Patriots", capacity: 65878 },
+      { name: "Hard Rock Stadium", lat: 25.9580, lon: -80.2389, team: "Miami Dolphins", capacity: 65326 },
+      { name: "New Era Field", lat: 42.7738, lon: -78.7870, team: "Buffalo Bills", capacity: 71608 },
+      { name: "M&T Bank Stadium", lat: 39.2780, lon: -76.6227, team: "Baltimore Ravens", capacity: 71008 },
+      { name: "Heinz Field", lat: 40.4468, lon: -80.0158, team: "Pittsburgh Steelers", capacity: 68400 },
+      { name: "FirstEnergy Stadium", lat: 41.5061, lon: -81.6995, team: "Cleveland Browns", capacity: 67895 },
+      { name: "Paul Brown Stadium", lat: 39.0955, lon: -84.5161, team: "Cincinnati Bengals", capacity: 65515 },
+      { name: "Nissan Stadium", lat: 36.1665, lon: -86.7713, team: "Tennessee Titans", capacity: 69143 },
+      { name: "Lucas Oil Stadium", lat: 39.7601, lon: -86.1639, team: "Indianapolis Colts", capacity: 67000 },
+      { name: "NRG Stadium", lat: 29.6847, lon: -95.4107, team: "Houston Texans", capacity: 72220 },
+      { name: "TIAA Bank Field", lat: 30.3249, lon: -81.6373, team: "Jacksonville Jaguars", capacity: 67200 },
+      { name: "Allegiant Stadium", lat: 36.0908, lon: -115.1830, team: "Las Vegas Raiders", capacity: 65000 },
+      { name: "Empower Field at Mile High", lat: 39.7439, lon: -105.0201, team: "Denver Broncos", capacity: 76125 },
+      { name: "SoFi Stadium", lat: 33.9535, lon: -118.3381, team: "Los Angeles Rams/Los Angeles Chargers", capacity: 70240 },
+      { name: "State Farm Stadium", lat: 33.5276, lon: -112.2635, team: "Arizona Cardinals", capacity: 63400 },
+      { name: "Levi's Stadium", lat: 37.4030, lon: -121.9702, team: "San Francisco 49ers", capacity: 68500 },
+      { name: "CenturyLink Field", lat: 47.5952, lon: -122.3316, team: "Seattle Seahawks", capacity: 68000 },
+      { name: "Raymond James Stadium", lat: 27.9759, lon: -82.5033, team: "Tampa Bay Buccaneers", capacity: 65890 },
+      { name: "Bank of America Stadium", lat: 35.2251, lon: -80.8531, team: "Carolina Panthers", capacity: 74867 },
+      { name: "Mercedes-Benz Superdome", lat: 29.9511, lon: -90.0812, team: "New Orleans Saints", capacity: 73208 },
+      { name: "FedExField", lat: 38.9077, lon: -76.8645, team: "Washington Commanders", capacity: 82000 },
+      { name: "Lincoln Financial Field", lat: 39.9007, lon: -75.1675, team: "Philadelphia Eagles", capacity: 69176 }
+    ];
+
+    // Stadium Marker and Popup
+    stadiums.forEach(function(stadium) {
+      L.marker([stadium.lat, stadium.lon])
+        .addTo(map)
+        .bindPopup("<b>" + stadium.name + "</b><br>Team: " + stadium.team + "<br>Capacity: " + stadium.capacity.toLocaleString());
+    });
+  </script>
+</body>
 </html>
