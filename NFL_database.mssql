@@ -1,0 +1,516 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.12
+-- Dumped by pg_dump version 12.12
+
+-- Started on 2024-10-15 21:16:01 EDT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 205 (class 1259 OID 25241)
+-- Name: attendance; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.attendance (
+    team_id integer,
+    total_attendance integer,
+    home_attendance integer,
+    away_attendance integer
+);
+
+
+ALTER TABLE public.attendance OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 25193)
+-- Name: city; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.city (
+    city_id integer NOT NULL,
+    city character varying(200),
+    state character varying(200),
+    population double precision
+);
+
+
+ALTER TABLE public.city OWNER TO postgres;
+
+--
+-- TOC entry 203 (class 1259 OID 25198)
+-- Name: stadium; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.stadium (
+    stadium_id integer NOT NULL,
+    home_stadium character varying(200),
+    city_state character varying(200),
+    latitude double precision,
+    longitude double precision,
+    capacity double precision
+);
+
+
+ALTER TABLE public.stadium OWNER TO postgres;
+
+--
+-- TOC entry 204 (class 1259 OID 25226)
+-- Name: team; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.team (
+    team_name character varying(200),
+    team_id integer NOT NULL,
+    stadium_id integer,
+    city_id integer
+);
+
+
+ALTER TABLE public.team OWNER TO postgres;
+
+--
+-- TOC entry 206 (class 1259 OID 25249)
+-- Name: team_revenue; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.team_revenue (
+    team_id integer NOT NULL,
+    "2023_revenue(millions)" double precision
+);
+
+
+ALTER TABLE public.team_revenue OWNER TO postgres;
+
+--
+-- TOC entry 207 (class 1259 OID 25269)
+-- Name: team_social_media; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.team_social_media (
+    team_id integer NOT NULL,
+    instagram double precision,
+    facebook double precision,
+    x double precision
+);
+
+
+ALTER TABLE public.team_social_media OWNER TO postgres;
+
+--
+-- TOC entry 3166 (class 0 OID 25241)
+-- Dependencies: 205
+-- Data for Name: attendance; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.attendance (team_id, total_attendance, home_attendance, away_attendance) FROM stdin;
+1	1113568	502912	610656
+2	1176416	556828	619588
+3	1170734	635380	535354
+4	1183200	626483	556717
+5	1163926	573086	590840
+6	1111491	494157	617334
+7	1144696	594361	550335
+8	1168498	610295	558203
+9	1378746	748755	629991
+10	1226925	687498	539427
+11	1170249	518741	651508
+12	1242403	622636	619767
+13	1184936	640742	544194
+14	1113729	587393	526336
+15	1150901	621599	529302
+16	1205847	638715	567132
+17	1111041	559713	551328
+18	1190939	627632	563307
+19	1235049	585204	649845
+20	1136583	593304	543279
+21	1157107	535308	621799
+22	1165144	567168	597976
+23	1188849	560164	628685
+24	1262352	634459	627893
+25	1285954	701011	584943
+26	1223746	559032	664714
+27	1146477	602796	543681
+28	1186315	573245	613070
+29	1193230	549886	643344
+30	1140061	510321	629740
+31	1117370	580686	536684
+32	1175750	511606	664144
+\.
+
+
+--
+-- TOC entry 3163 (class 0 OID 25193)
+-- Dependencies: 202
+-- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.city (city_id, city, state, population) FROM stdin;
+201	Glendale	 Arizona	253855
+202	Atlanta	 Georgia	510823
+203	Baltimore	 Maryland	565239
+204	Buffalo	 New York	274678
+205	Charlotte	North Carolina	911311
+206	Chicago	Illinois	2664452
+207	Cincinnati	 Ohio	311097
+208	Cleveland	 Ohio	362656
+209	Arlington	 Texas	398431
+210	Denver	 Colorado	716577
+211	Detroit	 Michigan	633218
+212	Green Bay	 Wisconsin	105744
+213	Houston	 Texas	2314157
+214	Indianapolis	Indiana	879293
+215	Jacksonville	 Florida	985843
+216	Kansas City	 Missouri	510704
+217	Las Vegas	 Nevada	660929
+218	Los Angeles	 California	3820914
+219	Miami	 Florida	455924
+220	Minneapolis	 Minnesota	425115
+221	Boston	 Massachusetts	653833
+222	New Orleans	 Louisiana	364136
+223	New York	 New York	8258035
+224	Philadelphia	 Pennsylvania	1550542
+225	Pittsburgh	 Pennsylvania	303255
+226	San Francisco	 California	808988
+227	Seattle	 Washington	755078
+228	Tampa	 Florida	403364
+229	Nashville	Tennessee	687788
+230	Washington	 District of Columbia	678972
+\.
+
+
+--
+-- TOC entry 3164 (class 0 OID 25198)
+-- Dependencies: 203
+-- Data for Name: stadium; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.stadium (stadium_id, home_stadium, city_state, latitude, longitude, capacity) FROM stdin;
+104	Highmark Stadium	Ochard Park_ New York	42.773773	-78.78746	71608
+119	Hard Rock Stadium	Miami Gardens_ Florida	25.95796	-80.239311	65326
+121	Gillete Stadium	Foxborough_ Massachusetts	42.08783298	-71.25866563	66829
+123	MetLife Stadium	East Rutherford_ New Jersey	40.813778	-74.217121	82500
+110	Empower Field at Mile High	Denver_ Colorado	39.744129	-105.020828	76125
+116	Arrowhead Stadium	Kansas City_ Missouri	39.048786	-94.484566	76416
+117	Allegiant Stadium	Paradise_ Nevada	36.090794	-115.183952	65500
+118	SoFi Stadium	Inglewood_ California	33.953587	-118.482441	27000
+103	M&T Bank Stadium	Baltimore_ Maryland	39.278088	-76.623322	71008
+107	Paycor Stadium	Cincinnati_ Ohio	39.096306	-84.516846	65515
+108	Cleveland Browns Stadium	Cleveland_ Ohio	41.506035	-81.700058	67895
+125	Acrisure Stadium	Pittsburgh_ Pennsylvania	40.44133157	-80.00949996	68400
+113	NRG Stadium	Houston_ Texas	29.68486	-95.411667	72220
+114	Lucas Oil Stadium	Indianapolis_ Indiana	39.759991	-86.163712	67000
+115	EverBank Stadium	Jacksonville_ Florida	30.323471	-81.636528	69132
+129	Nissan Stadium	Nashville_ Tennessee	36.166479	-86.77129	69143
+109	AT&T Stadium	Arlington_ Texas	32.747841	-97.093628	80000
+124	Lincoln Financial Field	Philadelphia_ Pennsylvania	39.900898	-75.168098	69596
+130	FedExField	Landover_ Maryland	38.90466305	-76.85866323	63000
+101	State Farm Stadium	Glendale_ Arizona	33.527283	-112.263275	63400
+126	Levi's Stadium	Santa Clara_ California	37.40201489	-121.9688691	68500
+127	Lumen Field	Seattle_ Washington	47.59049764	-122.3256654	69000
+106	Soldier Field	Chicago_ Illinois	41.862366	-87.617256	61500
+111	Ford Field	Detroit_ Michigan	42.340115	-83.046341	65000
+112	Lambeau Field	Green Bay_ Wisconsin	44.50083133	-88.0573331	81441
+120	U.S. Bank Stadium	Minneapolis_ Minnesota	44.973774	-93.258736	66655
+102	Mercedes-Benz Stadium	Atlanta_ Georgia	33.755489	-84.401993	71000
+105	Bank of America Stadium	Charlotte_ North Carolina	35.225845	-80.853607	75523
+122	Caesars Superdome	New Orleans_ Louisiana	29.951439	-90.08197	73208
+128	Raymond James Stadium	Tampa_ Florida	27.975958	-82.503693	65890
+\.
+
+
+--
+-- TOC entry 3165 (class 0 OID 25226)
+-- Dependencies: 204
+-- Data for Name: team; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.team (team_name, team_id, stadium_id, city_id) FROM stdin;
+Arizona Cardinals	1	101	201
+Atlanta Falcons	2	102	202
+Baltimore Ravens	3	103	203
+Buffalo Bills	4	104	204
+Carolina Panthers	5	105	205
+Chicago Bears	6	106	206
+Cincinnati Bengals	7	107	207
+Cleveland Browns	8	108	208
+Dallas Cowboys	9	109	209
+Denver Broncos	10	110	210
+Detroit Lions	11	111	211
+Green Bay Packers	12	112	212
+Houston Texans	13	113	213
+Indianapolis Colts	14	114	214
+Jacksonville Jaguars	15	115	215
+Kansas City Chiefs	16	116	216
+Las Vegas Raiders	17	117	217
+Los Angeles Chargers	18	118	218
+Los Angeles Rams	19	118	218
+Miami Dolphins	20	119	219
+Minnesota Vikings	21	120	220
+New England Patriots	22	121	221
+New Orleans Saints	23	122	222
+New York Giants	24	123	223
+New York Jets	25	123	223
+Philadelphia Eagles	26	124	224
+Pittsburgh Steelers	27	125	225
+San Francisco 49ers	28	126	226
+Seattle Seahawks	29	127	227
+Tampa Bay Buccaneers	30	128	228
+Tennessee Titans	31	129	229
+Washington Commanders	32	130	230
+\.
+
+
+--
+-- TOC entry 3167 (class 0 OID 25249)
+-- Dependencies: 206
+-- Data for Name: team_revenue; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.team_revenue (team_id, "2023_revenue(millions)") FROM stdin;
+9	1200
+17	779
+19	756
+22	712
+24	691
+28	680
+13	663
+12	654
+26	650
+20	646
+25	636
+30	617
+32	609
+10	608
+8	605
+29	600
+6	599
+27	595
+14	591
+16	591
+3	590
+23	581
+2	585
+18	574
+21	569
+15	567
+4	552
+7	549
+1	546
+11	501
+\.
+
+
+--
+-- TOC entry 3168 (class 0 OID 25269)
+-- Dependencies: 207
+-- Data for Name: team_social_media; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.team_social_media (team_id, instagram, facebook, x) FROM stdin;
+1	1200000	1300000	1160000
+2	1400000	1800000	2440000
+3	2200000	2200000	1870000
+4	1900000	1000000	1710000
+5	1900000	2100000	3070000
+6	1700000	3700000	2050000
+7	1700000	1200000	1530000
+8	1500000	1200000	1610000
+9	4900000	8200000	4380000
+10	1500000	3900000	2770000
+11	987000	1800000	1580000
+12	2800000	5000000	2590000
+13	1800000	2000000	1960000
+14	924000	2000000	1240000
+15	769000	650000	840000
+16	4000000	2000000	2390000
+17	2000000	3100000	1930000
+18	1000000	1400000	1100000
+19	2000000	910000	1240000
+20	2000000	2100000	1260000
+21	1500000	2000000	1550000
+22	5000000	6500000	4670000
+23	2100000	3800000	1750000
+24	2800000	3600000	2000000
+25	1200000	1700000	1380000
+26	3800000	3100000	3790000
+27	3700000	5900000	3750000
+28	3800000	3900000	2420000
+29	3400000	3600000	2560000
+30	1500000	1200000	1290000
+31	869000	970000	1060000
+32	1000000	1700000	1410000
+\.
+
+
+--
+-- TOC entry 3023 (class 2606 OID 25197)
+-- Name: city city_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.city
+    ADD CONSTRAINT city_pkey PRIMARY KEY (city_id);
+
+
+--
+-- TOC entry 3025 (class 2606 OID 25202)
+-- Name: stadium stadium_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.stadium
+    ADD CONSTRAINT stadium_pkey PRIMARY KEY (stadium_id);
+
+
+--
+-- TOC entry 3027 (class 2606 OID 25230)
+-- Name: team team_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team
+    ADD CONSTRAINT team_pkey PRIMARY KEY (team_id);
+
+
+--
+-- TOC entry 3029 (class 2606 OID 25253)
+-- Name: team_revenue team_revenue_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team_revenue
+    ADD CONSTRAINT team_revenue_pkey PRIMARY KEY (team_id);
+
+
+--
+-- TOC entry 3031 (class 2606 OID 25273)
+-- Name: team_social_media team_social_media_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team_social_media
+    ADD CONSTRAINT team_social_media_pkey PRIMARY KEY (team_id);
+
+
+--
+-- TOC entry 3034 (class 2606 OID 25244)
+-- Name: attendance attendance_team_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.attendance
+    ADD CONSTRAINT attendance_team_id_fkey FOREIGN KEY (team_id) REFERENCES public.team(team_id);
+
+
+--
+-- TOC entry 3033 (class 2606 OID 25236)
+-- Name: team team_city_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team
+    ADD CONSTRAINT team_city_id_fkey FOREIGN KEY (city_id) REFERENCES public.city(city_id);
+
+
+--
+-- TOC entry 3035 (class 2606 OID 25254)
+-- Name: team_revenue team_revenue_team_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team_revenue
+    ADD CONSTRAINT team_revenue_team_id_fkey FOREIGN KEY (team_id) REFERENCES public.team(team_id);
+
+
+--
+-- TOC entry 3036 (class 2606 OID 25274)
+-- Name: team_social_media team_social_media_team_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team_social_media
+    ADD CONSTRAINT team_social_media_team_id_fkey FOREIGN KEY (team_id) REFERENCES public.team(team_id);
+
+
+--
+-- TOC entry 3032 (class 2606 OID 25231)
+-- Name: team team_stadium_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.team
+    ADD CONSTRAINT team_stadium_id_fkey FOREIGN KEY (stadium_id) REFERENCES public.stadium(stadium_id);
+
+
+--
+-- TOC entry 3174 (class 0 OID 0)
+-- Dependencies: 205
+-- Name: TABLE attendance; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT ALL ON TABLE public.attendance TO pg_read_all_stats;
+GRANT SELECT ON TABLE public.attendance TO PUBLIC;
+
+
+--
+-- TOC entry 3175 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: TABLE city; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT ALL ON TABLE public.city TO pg_read_all_stats;
+GRANT SELECT ON TABLE public.city TO PUBLIC;
+
+
+--
+-- TOC entry 3176 (class 0 OID 0)
+-- Dependencies: 203
+-- Name: TABLE stadium; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT ALL ON TABLE public.stadium TO pg_read_all_stats;
+GRANT SELECT ON TABLE public.stadium TO PUBLIC;
+
+
+--
+-- TOC entry 3177 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: TABLE team; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT ALL ON TABLE public.team TO pg_read_all_stats;
+GRANT SELECT ON TABLE public.team TO PUBLIC;
+
+
+--
+-- TOC entry 3178 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: TABLE team_revenue; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT ALL ON TABLE public.team_revenue TO pg_read_all_stats;
+GRANT SELECT ON TABLE public.team_revenue TO PUBLIC;
+
+
+--
+-- TOC entry 3179 (class 0 OID 0)
+-- Dependencies: 207
+-- Name: TABLE team_social_media; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT ALL ON TABLE public.team_social_media TO pg_read_all_stats;
+GRANT SELECT ON TABLE public.team_social_media TO PUBLIC;
+
+
+-- Completed on 2024-10-15 21:16:01 EDT
+
+--
+-- PostgreSQL database dump complete
+--
+
