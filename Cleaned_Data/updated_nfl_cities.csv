@@ -1,0 +1,31 @@
+city_id,City,State,Population
+201,Glendale, Arizona,253855.0
+202,Atlanta, Georgia,510823.0
+203,Baltimore, Maryland,565239.0
+204,Buffalo, New York,274678.0
+205,Charlotte,North Carolina,911311.0
+206,Chicago,Illinois,2664452.0
+207,Cincinnati, Ohio,311097.0
+208,Cleveland, Ohio,362656.0
+209,Arlington, Texas,398431.0
+210,Denver, Colorado,716577.0
+211,Detroit, Michigan,633218.0
+212,Green Bay, Wisconsin,105744.0
+213,Houston, Texas,2314157.0
+214,Indianapolis,Indiana,879293.0
+215,Jacksonville, Florida,985843.0
+216,Kansas City, Missouri,510704.0
+217,Las Vegas, Nevada,660929.0
+218,Los Angeles, California,3820914.0
+219,Miami, Florida,455924.0
+220,Minneapolis, Minnesota,425115.0
+221,Boston, Massachusetts,653833.0
+222,New Orleans, Louisiana,364136.0
+223,New York, New York,8258035.0
+224,Philadelphia, Pennsylvania,1550542.0
+225,Pittsburgh, Pennsylvania,303255.0
+226,San Francisco, California,808988.0
+227,Seattle, Washington,755078.0
+228,Tampa, Florida,403364.0
+229,Nashville,Tennessee,687788.0
+230,Washington, District of Columbia,678972.0
