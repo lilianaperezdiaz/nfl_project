@@ -20,6 +20,7 @@ _Analysis includes:_
 **Dependencies:*
 1. Pandas
 2. Numpy
+3. Matplotlib
 
 **Installation Instructions:**
 *
