@@ -17,10 +17,21 @@ _Analysis includes:_
 
 **Ethical Summarization:*
 
+Webscraped data for the Nielsen Ratings Website for the most watched super bowls.Pulled the data, created a scatterplot, a bar plot, time series graph and a bubble chart. Also included that the webscraping was only for educational purposes in the notebook. Then included an Appendix in the notebook for relevant articles and websites where data was webscraped.
+
 **Dependencies:*
 1. Pandas
 2. Numpy
 3. Matplotlib
+4. import pandas as pd
+5. import seaborn as sns
+6. import matplotlib.pyplot as plt
+7. from selenium import webdriver
+8. from selenium.webdriver.chrome.service import Service
+9. from webdriver_manager.chrome import ChromeDriverManager
+10.from splinter import Browser
+11. from bs4 import BeautifulSoup
+12. plotly
 
 **Installation Instructions:**
 *
