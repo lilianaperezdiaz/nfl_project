@@ -27,9 +27,10 @@ _Analysis includes:_
 
 
 *Acknowledgements**
-*Attendance 2023 : https://www.espn.com/nfl/attendance/_/year/2023
-*Ticket Price 2023: Statista.com/Published by Christina Gough,
-*City Population for each team: Census.gov
+Attendance 2023 : https://www.espn.com/nfl/attendance/_/year/2023
+Ticket Price 2023: Statista.com/Published by Christina Gough,
+City Population for each team: Census.gov
+Revenue 2023: https://www.statista.com/statistics/193553/revenue-of-national-football-league-teams-in-2010/
 *Social Media Presence:
    - Facebook: Facebook Following: https://www.statista.com/statistics/240028/facebook-fans-of-national-football-league-teams/
    - Instagram Following: https://sports.yahoo.com/ranking-32-nfl-teams-instagram-150007302.html
