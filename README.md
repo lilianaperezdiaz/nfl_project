@@ -31,6 +31,10 @@ _Analysis includes:_
 *Ticket Price 2023: Statista.com/Published by Christina Gough,
 *City Population for each team: Census.gov
 *Social Media Presence:
+   - Facebook: Facebook Following: https://www.statista.com/statistics/240028/facebook-fans-of-national-football-league-teams/
+   - Instagram Following: https://sports.yahoo.com/ranking-32-nfl-teams-instagram-150007302.html
+   - Twitter Following: https://www.statista.com/statistics/240036/twitter-followers-of-national-football-league-teams/
+
 *Merchandising Sales - By Team:
 *Ticket Sales:
 *TV Viewership: Statista.com
