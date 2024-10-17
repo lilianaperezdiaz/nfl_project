@@ -58,8 +58,8 @@ Revenue 2023: https://www.statista.com/statistics/193553/revenue-of-national-foo
 *Stadium Locations: https://www.kaggle.com/datasets/kayla96/nfl-
 
 **TV Viewership:
-**Most Watched Super Bowl
-**Most Watched Teams per Super Bowl
+**Most Watched Super Bowl:
+**Most Watched Teams per Super Bowl:
 
 Nielsen Website: used it to pull TV viewership for Super Bowl. The "Super Bowl LVIII Draws 123.7 Million Average Viewers, Largest TV Audience on Record" Article publised on February 2024.Used Nielsen TV Audience: https://www.nielsen.com/news-center/2024/super-bowl-lviii-draws-123-7-million-average-viewers-largest-tv-audience-on-record/
 
