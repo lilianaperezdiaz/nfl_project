@@ -23,15 +23,19 @@ Webscraped data for the Nielsen Ratings Website for the most watched super bowls
 1. Pandas
 2. Numpy
 3. Matplotlib
-4. import pandas as pd
-5. import seaborn as sns
-6. import matplotlib.pyplot as plt
-7. from selenium import webdriver
-8. from selenium.webdriver.chrome.service import Service
-9. from webdriver_manager.chrome import ChromeDriverManager
-10.from splinter import Browser
-11. from bs4 import BeautifulSoup
-12. plotly
+4. Pandas 
+5. Seaborn 
+6. Roman
+7. Webdriver
+8. Service
+9. ChromeDriverManager
+10. Browser
+11. BeautifulSoup
+12. Plotly
+13. Bubbly
+14. Plotly.express
+15. Plotly.graph_objects
+
 
 **Installation Instructions:**
 *
