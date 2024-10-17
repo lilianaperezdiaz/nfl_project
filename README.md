@@ -57,6 +57,20 @@ Revenue 2023: https://www.statista.com/statistics/193553/revenue-of-national-foo
 *Stadium Capacity:
 *Stadium Locations: https://www.kaggle.com/datasets/kayla96/nfl-
 
+**TV Viewership:
+**Most Watched Super Bowl
+**Most Watched Teams per Super Bowl
+
+Nielsen Website: used it to pull TV viewership for Super Bowl. The "Super Bowl LVIII Draws 123.7 Million Average Viewers, Largest TV Audience on Record" Article publised on February 2024.Used Nielsen TV Audience: https://www.nielsen.com/news-center/2024/super-bowl-lviii-draws-123-7-million-average-viewers-largest-tv-audience-on-record/
+
+Google Website: used to define and describe how Nielsen Ratings are calculated. Google Search: https://www.google.com/search?q=what+does+the+hhld+rating+for+nielsen+rating&oq=what+does+the+hhld+rating+for+nielsen+rating&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTE3NDIzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+Forbes Website: used it to explain how the Nielsen Ratings are calculated. The "What Are Nielsen Ratings And How Are They Calculated?" Article published on December 18,2015. Forbes Nielsen Ratings: https://www.forbes.com/sites/seamuskirst/2015/12/18/what-are-nielsen-ratings-and-how-are-they-calculated/
+
+Pandas Website: Python Code Documentation Common place Python documentation for coding. Pandas: https://pandas.pydata.org/docs/reference/plotting.html
+
+Sportico Website: Average National NFL TV Ratings 2022 Nielsen Ratings of Most Watched Teams published on Janurary 13,2023 Website:https://www.sportico.com/business/media/2023/nfl-tv-ratings-report-cbs-fox-nbc-1234701217/
+
 
 teams-data
 Process:
