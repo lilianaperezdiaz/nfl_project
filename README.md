@@ -17,7 +17,7 @@ _Analysis includes:_
 
 **Ethical Summarization:*
 
-Webscraped data for the Nielsen Ratings Website for the most watched super bowls.Pulled the data, created a scatterplot, a bar plot, time series graph and a bubble chart. Also included that the webscraping was only for educational purposes in the notebook. Then included an Appendix in the notebook for relevant articles and websites where data was webscraped.
+Checked the terms of service for the Nielsen Ratings Website. Webscraped data for the Nielsen Ratings Website for the most watched super bowls.Pulled the data, created a scatterplot, a bar plot, time series graph and a bubble chart. Also included that the webscraping was only for educational purposes in the notebook. Then included an Appendix in the notebook for relevant articles and websites where data was webscraped.
 
 **Dependencies:*
 1. Pandas
