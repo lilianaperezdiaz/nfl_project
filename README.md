@@ -44,7 +44,9 @@ This project measures the popularity of NFL teams during 2023 by analyzing vario
 
 ## Installation Instructions
 
-[To be added]
+- Using Postgres, use the following link to create the necessary tables:
+  - [NFL Popularity Database Table Creation]((https://docs.google.com/document/d/1g2ed05IAzh5KvbEArst795_Px0Q05N0TeyTJOIQQhhM/editusp=sharing))
+
 
 ## Features
 
